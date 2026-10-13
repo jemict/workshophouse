@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Provision &amp; Pathways | Workshop House</title>
+  <meta name="description" content="EOTAS and Elective Home Education provision pathways, AQA Unit Award Scheme accreditation, and daily studio routine.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Outfit:wght@400;500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F5F0;
+      --card-bg: #FFFFFF;
+      --slate: #2B2D42;
+      --slate-light: #4A4E69;
+      --terracotta: #C86D51;
+      --sage: #7A8B7B;
+      --sage-light: #EBF0EC;
+      --border: #E5E1D8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--slate);
+      line-height: 1.6;
+    }
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--slate);
+    }
+    .brand-svg { width: 44px; height: 44px; flex-shrink: 0; }
+    .brand-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+    .brand-text span {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.75rem;
+      color: var(--terracotta);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--slate-light);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    nav a:hover, nav a.active { color: var(--terracotta); font-weight: 600; }
+    .btn-nav {
+      background-color: var(--terracotta);
+      color: #fff !important;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    .page-title {
+      margin-bottom: 2rem;
+    }
+    .page-title h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .page-title p {
+      color: var(--slate-light);
+      font-size: 1.1rem;
+      max-width: 750px;
+    }
+
+    .pathways-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+    .pathway-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      border-top: 4px solid var(--terracotta);
+    }
+    .pathway-card.sage-top {
+      border-top: 4px solid var(--sage);
+    }
+    .pathway-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+    .pathway-badge {
+      display: inline-block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      background: var(--bg);
+      color: var(--slate-light);
+    }
+    .pathway-card ul {
+      margin-top: 1rem;
+      padding-left: 1.2rem;
+      color: var(--slate-light);
+      font-size: 0.95rem;
+    }
+    .pathway-card li { margin-bottom: 0.4rem; }
+
+    .schedule-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .schedule-box h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.85rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.95rem;
+    }
+    th {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--bg);
+      color: var(--slate);
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .aqa-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .aqa-pill {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .aqa-code {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 600;
+      font-size: 0.8rem;
+      color: var(--terracotta);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .aqa-title {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--slate);
+    }
+
+    footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem 2rem 1.5rem;
+      margin-top: 5rem;
+    }
+    .legal-bar {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: #6B7280;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .pathways-grid { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <svg class="brand-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 60 10 L 115 55 L 115 115 L 5 115 L 5 55 Z" fill="none" stroke="#2B2D42" stroke-width="7" stroke-linejoin="round"/>
+          <line x1="15" y1="85" x2="105" y2="85" stroke="#C86D51" stroke-width="6" stroke-linecap="round"/>
+          <rect x="52" y="44" width="16" height="16" fill="#7A8B7B" />
+        </svg>
+        <div class="brand-text">
+          <h1>WORKSHOP HOUSE</h1>
+          <span>CREATIVE ENTERPRISE &amp; MAKER STUDIO</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pathways.html" class="active">Provision &amp; Pathways</a></li>
+          <li><a href="safeguarding.html">Safeguarding &amp; Policies</a></li>
+          <li><a href="contact.html" class="btn-nav">Admissions &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h2>Educational Pathways &amp; Daily Routine</h2>
+      <p>Specialist, non-school vocational learning mapped directly to EHCP Preparation for Adulthood (PfA) targets and assessed through evidence portfolios rather than exam pressure.</p>
+    </div>
+
+    <div class="pathways-grid">
+      <div class="pathway-card">
+        <span class="pathway-badge">Commissioned / Local Authority</span>
+        <h3>Statutory EOTAS Pathways (Section 61)</h3>
+        <p>Tailored daytime placements for young people where education in a conventional school environment is determined unsuitable by the local authority.</p>
+        <ul>
+          <li>Funded via Local Authority SEND Teams or Parent-Held Personal Budgets.</li>
+          <li>Structured progress tracking linked to Section F outcomes.</li>
+          <li>Lead Educator representation and reports for Annual Reviews.</li>
+          <li>Strictly part-time: 1 to 2 days per week (4.5 to 9 hours weekly).</li>
+        </ul>
+      </div>
+
+      <div class="pathway-card sage-top">
+        <span class="pathway-badge">Community / Parent Direct</span>
+        <h3>Elective Home Education (EHE) Sessions</h3>
+        <p>A gentle, pressure-free creative community hub for home-educated young people needing peer co-regulation and hands-on digital skills.</p>
+        <ul>
+          <li>Supportive micro-cohorts (maximum 6 learners per session).</li>
+          <li>Low-demand pacing honouring sensory regulation and anxiety profiles.</li>
+          <li>Flexible retained desk options and trial session opportunities.</li>
+          <li>Inclusive of all AQA Unit Award Scheme certificates.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="schedule-box">
+      <h3>The Maker Day Routine (09:30 – 14:00)</h3>
+      <p style="color:var(--slate-light); margin-bottom: 1.5rem;">The day balances pastoral arrival check-ins, applied creative focus, and sensory decompression breaks. Provision runs Tuesday to Thursday across 38 term-time weeks.</p>
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 25%;">Time</th>
+            <th style="width: 35%;">Session Focus</th>
+            <th>Pedagogical &amp; Operational Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>09:30 – 10:00</strong></td>
+            <td>Arrival &amp; Soft Landing</td>
+            <td>Low-sensory check-in, visual schedule setup, tea/drink, emotional baseline check.</td>
+          </tr>
+          <tr>
+            <td><strong>10:00 – 11:15</strong></td>
+            <td>Workshop Block 1: Digital Design</td>
+            <td>Canva layout, vector personalization, template sizing on individual workstations.</td>
+          </tr>
+          <tr>
+            <td><strong>11:15 – 11:45</strong></td>
+            <td>Sensory Break &amp; Snack</td>
+            <td>Quiet breakout snug, independent sensory rest, low-demand parallel chat.</td>
+          </tr>
+          <tr>
+            <td><strong>11:45 – 12:45</strong></td>
+            <td>Workshop Block 2: Physical Print</td>
+            <td>Sublimation heat presses, product inspection, quality control, packaging dispatch.</td>
+          </tr>
+          <tr>
+            <td><strong>12:45 – 13:30</strong></td>
+            <td>Lunch &amp; Decompression</td>
+            <td>Quiet dining area, muted acoustics, free downtime with zero academic pressure.</td>
+          </tr>
+          <tr>
+            <td><strong>13:30 – 14:00</strong></td>
+            <td>Studio Wrap-Up &amp; Portfolios</td>
+            <td>Evidence logging for AQA portfolios, tool check-in, structured calm departure.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div>
+      <h3 style="font-family:'Montserrat', sans-serif; font-size:1.5rem; margin-bottom:0.5rem;">AQA Unit Award Scheme (UAS) Modules</h3>
+      <p style="color:var(--slate-light);">Learners build accredited qualifications assessed purely through photographic logs, observational witness statements, and physical artifacts:</p>
+      <div class="aqa-grid">
+        <div class="aqa-pill"><span class="aqa-code">DT-01</span><span class="aqa-title">Workshop Health &amp; Safety</span></div>
+        <div class="aqa-pill"><span class="aqa-code">DT-02</span><span class="aqa-title">Operating a Heat Press</span></div>
+        <div class="aqa-pill"><span class="aqa-code">DT-03</span><span class="aqa-title">Sublimation Printing Production</span></div>
+        <div class="aqa-pill"><span class="aqa-code">DT-04</span><span class="aqa-title">Textile Quality Control</span></div>
+        <div class="aqa-pill"><span class="aqa-code">IT-01</span><span class="aqa-title">Introduction to Canva</span></div>
+        <div class="aqa-pill"><span class="aqa-code">IT-02</span><span class="aqa-title">Graphic Design &amp; Branding</span></div>
+        <div class="aqa-pill"><span class="aqa-code">BE-01</span><span class="aqa-title">Working in a Team</span></div>
+        <div class="aqa-pill"><span class="aqa-code">BE-02</span><span class="aqa-title">Applied Maths &amp; English at Work</span></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="legal-bar">
+      <span>Workshop House CIC (in formation) • Redditch, Worcestershire</span>
+      <span>DfE Part-Time Threshold Compliant (&lt;15 hrs/wk)</span>
+    </div>
+  </footer>
+
+</body>
+</html>

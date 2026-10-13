@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Safeguarding &amp; Policies | Workshop House</title>
+  <meta name="description" content="Safeguarding protocols, Designated Safeguarding Lead contacts, and governance policies for Workshop House.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Outfit:wght@400;500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F5F0;
+      --card-bg: #FFFFFF;
+      --slate: #2B2D42;
+      --slate-light: #4A4E69;
+      --terracotta: #C86D51;
+      --sage: #7A8B7B;
+      --border: #E5E1D8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--slate);
+      line-height: 1.6;
+    }
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--slate);
+    }
+    .brand-svg { width: 44px; height: 44px; flex-shrink: 0; }
+    .brand-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+    .brand-text span {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.75rem;
+      color: var(--terracotta);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--slate-light);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    nav a:hover, nav a.active { color: var(--terracotta); font-weight: 600; }
+    .btn-nav {
+      background-color: var(--terracotta);
+      color: #fff !important;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    .page-title h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .page-title p {
+      color: var(--slate-light);
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin-bottom: 2.5rem;
+    }
+
+    .dsl-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-left: 5px solid var(--terracotta);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    .dsl-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+    }
+    .contact-details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .contact-item {
+      background: var(--bg);
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+    .contact-item span {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--terracotta);
+      text-transform: uppercase;
+    }
+
+    .directory-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #FFFFFF;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 3rem;
+    }
+    .directory-table th, .directory-table td {
+      padding: 0.85rem 1.2rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.92rem;
+    }
+    .directory-table th {
+      background: var(--bg);
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .policy-downloads {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .doc-link {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      padding: 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--slate);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      transition: border-color 0.2s;
+    }
+    .doc-link:hover {
+      border-color: var(--terracotta);
+    }
+    .doc-icon { font-size: 1.8rem; }
+    .doc-info strong { font-size: 0.95rem; display: block; }
+    .doc-info span { font-size: 0.8rem; color: #6B7280; }
+
+    footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem 2rem 1.5rem;
+      margin-top: 5rem;
+    }
+    .legal-bar {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 0.8rem;
+      color: #6B7280;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) { nav ul { display: none; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <svg class="brand-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 60 10 L 115 55 L 115 115 L 5 115 L 5 55 Z" fill="none" stroke="#2B2D42" stroke-width="7" stroke-linejoin="round"/>
+          <line x1="15" y1="85" x2="105" y2="85" stroke="#C86D51" stroke-width="6" stroke-linecap="round"/>
+          <rect x="52" y="44" width="16" height="16" fill="#7A8B7B" />
+        </svg>
+        <div class="brand-text">
+          <h1>WORKSHOP HOUSE</h1>
+          <span>CREATIVE ENTERPRISE &amp; MAKER STUDIO</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pathways.html">Provision &amp; Pathways</a></li>
+          <li><a href="safeguarding.html" class="active">Safeguarding &amp; Policies</a></li>
+          <li><a href="contact.html" class="btn-nav">Admissions &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h2>Safeguarding &amp; Studio Governance</h2>
+      <p>Workshop House voluntarily adheres to the statutory benchmarks of <em>Keeping Children Safe in Education (KCSIE 2026)</em> and <em>Working Together to Safeguard Children</em>.</p>
+    </div>
+
+    <div class="dsl-card">
+      <h3>Designated Safeguarding Lead (DSL)</h3>
+      <p style="color:var(--slate-light);">For any welfare enquiries, child protection matters, or multi-agency communications:</p>
+      <div class="contact-details-grid">
+        <div class="contact-item">
+          <span>DSL &amp; Head of Provision</span>
+          <strong>Jemma Watkiss (QTS)</strong>
+        </div>
+        <div class="contact-item">
+          <span>Direct Studio Mobile</span>
+          <strong>07899 058054</strong>
+        </div>
+        <div class="contact-item">
+          <span>Dedicated Contact Email</span>
+          <strong>jemict@gmail.com</strong>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-family:'Montserrat', sans-serif; font-size:1.35rem; margin-bottom:1rem;">Emergency &amp; Multi-Agency Safeguarding Directory</h3>
+    <table class="directory-table">
+      <thead>
+        <tr>
+          <th>Agency / Authority</th>
+          <th>Contact Function</th>
+          <th>Telephone / Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Family Front Door (Worcestershire)</strong></td>
+          <td>Children’s Social Care MASH</td>
+          <td>01905 822666</td>
+        </tr>
+        <tr>
+          <td><strong>Out-of-Hours Emergency Duty Team</strong></td>
+          <td>Social Care Out-of-Hours</td>
+          <td>01905 768020</td>
+        </tr>
+        <tr>
+          <td><strong>Worcestershire LADO</strong></td>
+          <td>Allegations against adults</td>
+          <td>01905 846221</td>
+        </tr>
+        <tr>
+          <td><strong>DfE Counter-Extremism / Prevent</strong></td>
+          <td>Prevent Duty Helpline</td>
+          <td>020 7340 7264</td>
+        </tr>
+        <tr>
+          <td><strong>Emergency Services</strong></td>
+          <td>Police &amp; Ambulance</td>
+          <td>999 (Emergency) / 101 (Non-Emergency)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="font-family:'Montserrat', sans-serif; font-size:1.35rem; margin-bottom:0.5rem;">Statutory Governance &amp; Policy Packs</h3>
+    <p style="color:var(--slate-light);">Download our statutory policies for commission reviews and local authority panels:</p>
+    <div class="policy-downloads">
+      <div class="doc-link">
+        <div class="doc-icon">📄</div>
+        <div class="doc-info">
+          <strong>Safeguarding &amp; Child Protection</strong>
+          <span>KCSIE 2026 Compliant • Adopted Oct 2026</span>
+        </div>
+      </div>
+      <div class="doc-link">
+        <div class="doc-icon">📄</div>
+        <div class="doc-info">
+          <strong>Workshop Health, Safety &amp; Heat Press</strong>
+          <span>PUWER &amp; Risk Assessment Protocols</span>
+        </div>
+      </div>
+      <div class="doc-link">
+        <div class="doc-icon">📄</div>
+        <div class="doc-info">
+          <strong>Safer Recruitment &amp; SCR Framework</strong>
+          <span>Vetting &amp; Enhanced DBS Protocols</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="legal-bar">
+      <span>Workshop House CIC (in formation) • Redditch, Worcestershire</span>
+      <span>Operating strictly within non-school part-time limits (&lt;15 hrs/wk)</span>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions &amp; Contact | Workshop House</title>
+  <meta name="description" content="Get in touch with Workshop House to arrange a quiet discovery visit or submit an EOTAS referral.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Outfit:wght@400;500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F5F0;
+      --card-bg: #FFFFFF;
+      --slate: #2B2D42;
+      --slate-light: #4A4E69;
+      --terracotta: #C86D51;
+      --sage: #7A8B7B;
+      --border: #E5E1D8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--slate);
+      line-height: 1.6;
+    }
+    header {
+      background: #FFFFFF;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--slate);
+    }
+    .brand-svg { width: 44px; height: 44px; flex-shrink: 0; }
+    .brand-text h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.1;
+    }
+    .brand-text span {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.75rem;
+      color: var(--terracotta);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--slate-light);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    nav a:hover, nav a.active { color: var(--terracotta); font-weight: 600; }
+    .btn-nav {
+      background-color: var(--terracotta);
+      color: #fff !important;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-weight: 600 !important;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    .page-title h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .page-title p {
+      color: var(--slate-light);
+      font-size: 1.1rem;
+      max-width: 750px;
+      margin-bottom: 3rem;
+    }
+
+    .onboarding-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+    .step-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      position: relative;
+    }
+    .step-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--terracotta);
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .step-box h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.5rem;
+    }
+    .step-box p {
+      color: var(--slate-light);
+      font-size: 0.88rem;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 2.5rem;
+    }
+    .form-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+    label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--slate);
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: var(--bg);
+      color: var(--slate);
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--terracotta);
+      background: #FFFFFF;
+    }
+    .btn-submit {
+      background: var(--terracotta);
+      color: #FFFFFF;
+      border: none;
+      padding: 0.85rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+    }
+    .btn-submit:hover { background: #B45B40; }
+
+    .info-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 2rem;
+      height: fit-content;
+    }
+    .info-card h4 {
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .info-card p {
+      color: var(--slate-light);
+      font-size: 0.92rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #FFFFFF;
+      border-top: 1px solid var(--border);
+      padding: 3rem 1.5rem 2rem 1.5rem;
+      margin-top: 5rem;
+    }
+    .legal-bar {
+      max-width: 1100px;
+      margin: 0 auto;
+      font-size: 0.8rem;
+      color: #6B7280;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand">
+        <svg class="brand-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 60 10 L 115 55 L 115 115 L 5 115 L 5 55 Z" fill="none" stroke="#2B2D42" stroke-width="7" stroke-linejoin="round"/>
+          <line x1="15" y1="85" x2="105" y2="85" stroke="#C86D51" stroke-width="6" stroke-linecap="round"/>
+          <rect x="52" y="44" width="16" height="16" fill="#7A8B7B" />
+        </svg>
+        <div class="brand-text">
+          <h1>WORKSHOP HOUSE</h1>
+          <span>CREATIVE ENTERPRISE &amp; MAKER STUDIO</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pathways.html">Provision &amp; Pathways</a></li>
+          <li><a href="safeguarding.html">Safeguarding &amp; Policies</a></li>
+          <li><a href="contact.html" class="btn-nav">Admissions &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <h2>Gentle Admissions &amp; Enquiries</h2>
+      <p>We know exploring new environments after school-related distress takes immense courage. Our 4-step onboarding journey is unhurried, low-demand, and transparent.</p>
+    </div>
+
+    <div class="onboarding-steps">
+      <div class="step-box">
+        <div class="step-num">01</div>
+        <h4>Initial Conversation</h4>
+        <p>An informal phone call or Teams chat with parents or caseworkers to discuss sensory profiles, interests, and needs.</p>
+      </div>
+      <div class="step-box">
+        <div class="step-num">02</div>
+        <h4>Door-Open Visit</h4>
+        <p>A quiet, zero-demand walk-through outside learner hours. The young person can look around, touch the machines, or just sit quietly.</p>
+      </div>
+      <div class="step-box">
+        <div class="step-num">03</div>
+        <h4>Low-Demand Taster</h4>
+        <p>A short practical trial making a personalized item (like a mug or print) alongside staff to assess nervous system comfort.</p>
+      </div>
+      <div class="step-box">
+        <div class="step-num">04</div>
+        <h4>Agreed Placement</h4>
+        <p>Confirming part-time schedule (1–2 days/week) via Local Authority EOTAS agreement or EHE retained desk.</p>
+      </div>
+    </div>
+
+    <div class="contact-grid">
+      <div class="form-card">
+        <h3 style="font-family:'Montserrat', sans-serif; margin-bottom:1rem; font-size:1.35rem;">Send an Enquiry or Referral</h3>
+        <form action="mailto:jemict@gmail.com" method="POST" enctype="text/plain">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="Name" required placeholder="e.g. Sarah Jenkins">
+          </div>
+          <div class="form-group">
+            <label for="role">I am a...</label>
+            <select id="role" name="Role">
+              <option value="Parent/Carer">Parent / Carer</option>
+              <option value="SEN Caseworker">Local Authority SEN Caseworker</option>
+              <option value="School SENCo">School SENCo / Inclusion Lead</option>
+              <option value="Other">Other Community Professional</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="email">Contact Email</label>
+            <input type="email" id="email" name="Email" required placeholder="name@example.co.uk">
+          </div>
+          <div class="form-group">
+            <label for="phone">Contact Telephone</label>
+            <input type="tel" id="phone" name="Phone" placeholder="07xxx xxxxxx">
+          </div>
+          <div class="form-group">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="Message" rows="4" placeholder="Tell us about the young person (age, Key Stage, current schooling status, and interests)..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit Enquiry</button>
+        </form>
+      </div>
+
+      <div class="info-card">
+        <h4>Studio Details</h4>
+        <p><strong>Location:</strong> Redditch, Worcestershire</p>
+        <p><strong>Direct Line:</strong> 07899 058054</p>
+        <p><strong>Email:</strong> jemict@gmail.com</p>
+        <p><strong>Studio Hours:</strong> Tuesday – Thursday: 09:30 – 14:00</p>
+        <hr style="border:0; border-top:1px solid var(--border); margin:1.5rem 0;">
+        <h4 style="font-size:1.05rem;">Privacy &amp; GDPR</h4>
+        <p style="font-size:0.85rem; color:#6B7280;">Your information is handled strictly in accordance with UK GDPR. Information shared is treated in confidence and used solely to assess placement fit.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="legal-bar">
+      <span>Workshop House CIC (in formation) • Redditch, Worcestershire</span>
+      <span>Operating strictly within non-school part-time limits (&lt;15 hrs/wk)</span>
+    </div>
+  </footer>
+
+</body>
+</html>
