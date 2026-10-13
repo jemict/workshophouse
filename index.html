@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Workshop House | Creative Enterprise &amp; Maker Studio</title>
-  <meta name="description" content="A calm, low-arousal creative maker studio in Redditch for neurodivergent and home-educated young people aged 9–16.">
+  <meta name="description" content="A calm, low-arousal creative maker studio in Redditch for neurodivergent and home-educated young people aged 9 to 16.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Outfit:wght@400;500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
@@ -36,7 +36,7 @@
     .nav-container {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 0.85rem 1.5rem;
+      padding: 0.75rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -44,14 +44,15 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.85rem;
       text-decoration: none;
       color: var(--slate);
     }
-    .brand-svg {
-      width: 44px;
-      height: 44px;
-      flex-shrink: 0;
+    .brand-logo-img {
+      height: 48px;
+      width: auto;
+      display: block;
+      border-radius: 4px;
     }
     .brand-text h1 {
       font-family: 'Montserrat', sans-serif;
@@ -95,10 +96,10 @@
 
     .hero {
       max-width: 1100px;
-      margin: 2rem auto;
+      margin: 2.5rem auto;
       padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: 1.2fr 1fr;
+      grid-template-columns: 1.15fr 1fr;
       gap: 2.5rem;
       align-items: center;
     }
@@ -108,15 +109,15 @@
       color: var(--sage);
       font-size: 0.85rem;
       font-weight: 600;
-      padding: 0.35rem 0.8rem;
+      padding: 0.35rem 0.85rem;
       border-radius: 30px;
       margin-bottom: 1rem;
       border: 1px solid rgba(122,139,123,0.3);
     }
     .hero h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 2.3rem;
-      line-height: 1.2;
+      font-size: 2.25rem;
+      line-height: 1.25;
       margin-bottom: 1rem;
       color: var(--slate);
     }
@@ -153,8 +154,9 @@
       border-radius: 12px;
       overflow: hidden;
       border: 1px solid var(--border);
-      box-shadow: 0 10px 25px rgba(43,45,66,0.08);
+      box-shadow: 0 10px 25px rgba(43,45,66,0.06);
       background: #FFFFFF;
+      aspect-ratio: 4 / 3;
     }
     .hero-image-wrap img {
       width: 100%;
@@ -170,7 +172,7 @@
     }
     .section-header {
       text-align: center;
-      max-width: 700px;
+      max-width: 760px;
       margin: 0 auto 3rem auto;
     }
     .section-header h3 {
@@ -215,20 +217,28 @@
       line-height: 1.55;
     }
 
-    .banner-quote {
+    .compliance-box {
       background: #FFFFFF;
-      border-left: 4px solid var(--terracotta);
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 3rem 0;
-      border-top: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      border: 1.5px solid var(--sage);
+      border-left: 6px solid var(--sage);
+      border-radius: 10px;
+      padding: 2.2rem;
+      margin: 3.5rem 0;
     }
-    .banner-quote h4 {
+    .compliance-box h4 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+      color: var(--slate);
+      margin-bottom: 0.75rem;
+    }
+    .compliance-box p {
+      color: var(--slate-light);
+      font-size: 0.95rem;
+      margin-bottom: 0.85rem;
+      line-height: 1.6;
+    }
+    .compliance-box p:last-child {
+      margin-bottom: 0;
     }
 
     footer {
@@ -288,11 +298,7 @@
   <header>
     <div class="nav-container">
       <a href="index.html" class="brand">
-        <svg class="brand-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <path d="M 60 10 L 115 55 L 115 115 L 5 115 L 5 55 Z" fill="none" stroke="#2B2D42" stroke-width="7" stroke-linejoin="round"/>
-          <line x1="15" y1="85" x2="105" y2="85" stroke="#C86D51" stroke-width="6" stroke-linecap="round"/>
-          <rect x="52" y="44" width="16" height="16" fill="#7A8B7B" />
-        </svg>
+        <img src="logo.jpg" alt="Workshop House Logo" class="brand-logo-img">
         <div class="brand-text">
           <h1>WORKSHOP HOUSE</h1>
           <span>CREATIVE ENTERPRISE &amp; MAKER STUDIO</span>
@@ -312,46 +318,48 @@
   <main>
     <section class="hero">
       <div class="hero-content">
-        <span class="hero-badge">Specialist Non-School Maker Studio • Redditch</span>
-        <h2>Hands-on enterprise. Sensory-safe design. Real autonomy.</h2>
-        <p>A low-arousal daytime studio for young people aged 9–16 navigating neurodivergence, sensory sensitivities, and Emotionally Based School Avoidance (EBSA). Practical digital design and dye-sublimation making with accredited AQA awards.</p>
+        <span class="hero-badge">Specialist Non-School Maker Studio (Redditch)</span>
+        <h2>Hands-on creativity. Calm spaces. Real autonomy.</h2>
+        <p>A welcoming, low-arousal daytime studio for young people aged 9 to 16 navigating neurodivergence, sensory sensitivities, and Emotionally Based School Avoidance (EBSA). Practical digital design, creative printmaking, and portfolio-based AQA unit awards.</p>
         <div class="hero-actions">
           <a href="pathways.html" class="btn-primary">Explore Pathways</a>
           <a href="contact.html" class="btn-secondary">Arrange a Quiet Visit</a>
         </div>
       </div>
       <div class="hero-image-wrap">
-        <img src="cover.jpg" alt="Learners collaborating calmly in Workshop House studio" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80'">
+        <img src="hero-young-makers.jpg" alt="Younger children engaging happily and calmly with hands-on craft and design materials" onerror="this.src='https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1000&q=80'">
       </div>
     </section>
 
     <section class="section">
       <div class="section-header">
-        <h3>The Core Approach: "Enterprise as an Anchor"</h3>
-        <p>Removing the institutional pressure of bells, uniforms, and rigid hierarchies—replacing them with tangible craftsmanship and genuine workplace purpose.</p>
+        <h3>A Supportive Foundation for Every Learner</h3>
+        <p>Removing the institutional pressure of bells, uniforms, and rigid testing, while offering young people a safe environment to explore creative ideas at their own pace.</p>
       </div>
 
       <div class="pillars-grid">
         <div class="card">
           <div class="card-icon">🏠</div>
-          <h4>De-Institutionalised Setting</h4>
-          <p>A quiet studio layout instead of rows of desks. Young people are welcomed as valued workshop team members, shifting the dynamic from pupil compliance to mutual respect.</p>
+          <h4>Gentle, Low-Arousal Studio</h4>
+          <p>A calm studio setting rather than formal rows of desks. Young people are supported as individuals with room to regulate, take breaks, and work comfortably.</p>
         </div>
         <div class="card">
           <div class="card-icon">💡</div>
-          <h4>Micro-Groups &amp; High Ratios</h4>
-          <p>Capped at 6 learners per session with a strict 1:3 staff ratio. Led directly by a Qualified Teacher (QTS) with over 20 years of specialist SEND and computing experience.</p>
+          <h4>Micro-Groups &amp; Dedicated Support</h4>
+          <p>Strictly capped at 6 learners per session with a 1:3 staff ratio. Guided by an experienced Lead Educator with over 25 years in education and special educational needs.</p>
         </div>
         <div class="card">
-          <div class="card-icon">🖨️</div>
-          <h4>Authentic Real-World Making</h4>
-          <p>Learners master graphic design in Canva, vector scaling, dye-sublimation print presses, and dispatch logistics. Real tasks with real stakes that build organic dopamine and self-worth.</p>
+          <div class="card-icon">🎨</div>
+          <h4>Simulated Briefs &amp; Real Skills</h4>
+          <p>Learners develop digital layout skills, typography, printmaking, and packaging. Activities combine hands-on making with structured, low-demand worksheets and project portfolios.</p>
         </div>
       </div>
 
-      <div class="banner-quote">
-        <h4>Powered by Live Social Enterprise</h4>
-        <p>Our practical curriculum is anchored in the live manufacturing operations of <strong>Dotty Moo</strong>, an active commercial personalisation brand. Learners never complete abstract simulated worksheets; they make real products for real orders. 100% of trading revenue is locked directly within the Community Interest Company to subsidise community bursaries and maker equipment.</p>
+      <div class="compliance-box">
+        <h4>Clear Educational Safeguards &amp; Commissioning Ethics</h4>
+        <p><strong>Strictly Educational, Never Commercial Labour:</strong> Workshop House exists solely to provide therapeutic, vocational, and creative education. Young people are students on an educational journey, never a workforce. Every session is designed for personal development, sensory regulation, and accredited learning.</p>
+        <p><strong>Structured Learning Materials:</strong> Learners regularly complete simulated customer briefs, practice design exercises, and structured curriculum worksheets mapped to their portfolios. When learners choose to experience real-world maker tasks through our community brand, Dotty Moo, participation is voluntary, unhurried, and supported by a guaranteed adult backstop. Commercial output deadlines and store operations are handled entirely by adult staff outside teaching hours, ensuring zero production pressure on young people.</p>
+        <p><strong>Asset-Locked Community Focus:</strong> 100% of trading surplus from social enterprise products remains strictly locked within our Community Interest Company to fund learner equipment, workshop blanks, and community bursaries.</p>
       </div>
     </section>
   </main>
@@ -361,7 +369,7 @@
       <div class="footer-col">
         <h5>Workshop House</h5>
         <p style="color:var(--slate-light); font-size:0.9rem; margin-bottom:1rem;">Specialist non-school creative enterprise and vocational learning in Redditch, Worcestershire. Supporting learners aged 9 to 16 with EOTAS and EHE pathways.</p>
-        <p style="color:var(--slate-light); font-size:0.85rem;">Provision Lead: Jemma Watkiss (QTS)</p>
+        <p style="color:var(--slate-light); font-size:0.85rem;">Lead Educator: Over 25 years teaching and special needs experience.</p>
       </div>
       <div class="footer-col">
         <h5>Quick Links</h5>
@@ -375,13 +383,13 @@
       <div class="footer-col">
         <h5>Studio Base</h5>
         <p style="color:var(--slate-light); font-size:0.9rem;">Redditch, Worcestershire</p>
-        <p style="color:var(--slate-light); font-size:0.9rem; margin-top:0.4rem;">Tues – Thurs: 09:30 – 14:00</p>
+        <p style="color:var(--slate-light); font-size:0.9rem; margin-top:0.4rem;">Tues to Thurs: 09:30 to 14:00</p>
         <p style="color:var(--slate-light); font-size:0.9rem; margin-top:0.4rem;">jemict@gmail.com</p>
       </div>
     </div>
     <div class="legal-bar">
       <span>Workshop House is an asset-locked Community Interest Company in formation. Registered in England &amp; Wales.</span>
-      <span>Operating strictly within non-school part-time limits (&lt;15 hrs/wk).</span>
+      <span>Operating strictly within non-school part-time limits (under 15 hours per week).</span>
     </div>
   </footer>
 
