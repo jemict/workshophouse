@@ -41,18 +41,21 @@
       justify-content: space-between;
       align-items: center;
     }
-    .brand {
+   .brand {
       display: flex;
       align-items: center;
-      gap: 0.85rem;
       text-decoration: none;
-      color: var(--slate);
     }
     .brand-logo-img {
-      height: 48px;
+      height: 72px; /* Increased from 48px */
       width: auto;
+      max-width: 220px;
+      object-fit: contain;
       display: block;
-      border-radius: 4px;
+      transition: transform 0.2s ease;
+    }
+    .brand-logo-img:hover {
+      transform: scale(1.02);
     }
     .brand-text h1 {
       font-family: 'Montserrat', sans-serif;
