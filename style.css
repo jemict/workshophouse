@@ -13,7 +13,7 @@
   --border: #E5E1D8;
 }
 
-* {
+*  {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
