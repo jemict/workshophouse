@@ -3,20 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admissions &amp; Contact | Workshop House</title>
-  <meta name="description" content="Get in touch with Workshop House to arrange a quiet discovery visit or submit an EOTAS referral.">
+  <title>Admissions &amp; Contact | Workshop House CIC</title>
+  <meta name="description" content="Get in touch with Workshop House CIC to arrange an unhurried discovery visit, register for a community place, or submit a statutory referral.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Outfit:wght@400;500;600&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
 
-<header>
+  <header>
     <div class="nav-container">
       <a href="index.html" class="brand" title="Workshop House Home">
-        <img src="logo.jpg" alt="Workshop House Logo" class="brand-icon-img">
+        <img src="logo.jpg" alt="Workshop House Logo" class="brand-icon-img" style="height: 48px; width: auto; max-width: 180px; display: block;">
         <div class="brand-text">
           <h1>WORKSHOP HOUSE CIC</h1>
           <span>CREATIVE ENTERPRISE &amp; MAKER STUDIO</span>
@@ -46,7 +46,7 @@
   <main class="container">
     <div class="page-title">
       <h2>Gentle Admissions &amp; Enquiries</h2>
-      <p>We know exploring new environments after school-related distress takes immense courage. Our 4-step onboarding journey is unhurried, low-demand, and transparent.</p>
+      <p style="max-width: 1000px;">We know exploring new environments after school-related distress takes immense courage. Our 4-step onboarding journey is unhurried, low-demand, and transparent.</p>
     </div>
 
     <div class="onboarding-steps">
@@ -58,23 +58,26 @@
       <div class="step-box">
         <div class="step-num">02</div>
         <h4>Door-Open Visit</h4>
-        <p>A quiet, zero-demand walk-through outside learner hours. The young person can look around, touch the machines, or just sit quietly.</p>
+        <p>A quiet, zero-demand walk-through outside learner hours. The young person can look around, touch materials, or just sit quietly.</p>
       </div>
       <div class="step-box">
         <div class="step-num">03</div>
         <h4>Low-Demand Taster</h4>
-        <p>A short practical trial making a personalised item (like a mug or print) alongside staff to assess nervous system comfort.</p>
+        <p>A short practical trial making a personalised craft or print piece alongside staff to assess nervous system comfort.</p>
       </div>
       <div class="step-box">
         <div class="step-num">04</div>
         <h4>Agreed Placement</h4>
-        <p>Confirming part-time schedule (up to 6 sessions/week) via Local Authority agreement or EHE community desk.</p>
+        <p>Confirming part-time schedule (1 to 5 sessions weekly, strictly under 15 hours) via Local Authority agreement or EHE community desk.</p>
       </div>
     </div>
 
     <div class="contact-grid">
       <div class="form-card">
-        <h3 style="font-family:'Montserrat', sans-serif; margin-bottom:1rem; font-size:1.35rem;">Send an Enquiry or Referral</h3>
+        <h3 style="font-family:'Montserrat', sans-serif; margin-bottom:1rem; font-size:1.35rem; color:var(--slate);">Send an Enquiry or Referral</h3>
+        <p style="color:var(--slate-light); font-size:0.9rem; margin-bottom:1.5rem;">
+          Whether you are a parent exploring a community desk or a SENCo/Caseworker submitting a referral, get in touch below or email us directly at <strong>hello@workshophouse.org.uk</strong>.
+        </p>
         <form action="mailto:hello@workshophouse.org.uk" method="POST" enctype="text/plain">
           <div class="form-group">
             <label for="name">Your Name</label>
@@ -108,18 +111,20 @@
       <div class="info-card">
         <h4>Studio Details</h4>
         <p><strong>Location:</strong> Redditch, Worcestershire</p>
-        <p><strong>Direct Line:</strong>To be confirmed</p>
-        <p><strong>Email:</strong> hello@workshophouse.org.uk</p>
-        <p><strong>Studio Days:</strong> Monday – Thursday</p>
-         <p><strong>Studio Hours:</strong> 09:00 – 15:30</p>
+        <p><strong>Direct Line:</strong> To be confirmed (Pending launch)</p>
+        <p><strong>General Enquiries:</strong> hello@workshophouse.org.uk</p>
+        <p><strong>Safeguarding &amp; DSL:</strong> safeguarding@workshophouse.org.uk</p>
+        <p><strong>Studio Operating Days:</strong> Tuesday to Thursday</p>
+        <p><strong>Session Blocks:</strong> Morning (10:00 to 12:00) &amp; Afternoon (13:00 to 15:00)</p>
+        
         <hr style="border:0; border-top:1px solid var(--border); margin:1.5rem 0;">
         <h4 style="font-size:1.05rem;">Privacy &amp; GDPR</h4>
-        <p style="font-size:0.85rem; color:#6B7280;">Your information is handled strictly in accordance with UK GDPR. Information shared is treated in confidence and used solely to assess placement fit.</p>
+        <p style="font-size:0.85rem; color:#6B7280; line-height:1.5;">Your information is handled strictly in accordance with UK GDPR. Information shared is treated in confidence and used solely to assess placement fit.</p>
       </div>
     </div>
   </main>
 
-<footer id="site-footer"></footer>
+  <footer id="site-footer"></footer>
   <script>
     fetch('footer.html')
       .then(response => response.text())
