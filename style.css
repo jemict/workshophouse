@@ -13,7 +13,7 @@
   --border: #E5E1D8;
 }
 
-*  {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -26,12 +26,7 @@ body {
   line-height: 1.6;
 }
 
-/* --- HEADER & NAVIGATION --- */
-/* Hide mobile toggle on desktop */
-.nav-toggle-input,
-.menu-toggle {
-  display: none;
-}
+/* --- HEADER & DESKTOP NAVIGATION --- */
 header {
   background: #FFFFFF;
   border-bottom: 1px solid var(--border);
@@ -55,11 +50,11 @@ header {
   align-items: center;
   gap: 0.75rem;
   text-decoration: none;
-  flex-shrink: 0; /* Prevents the logo/brand from getting squeezed */
+  flex-shrink: 0;
 }
 
 .brand-icon-img {
-  height: 48px; /* Slightly refined to give links more room */
+  height: 48px;
   width: auto;
   max-width: 180px;
   object-fit: contain;
@@ -90,10 +85,16 @@ header {
   text-transform: uppercase;
 }
 
+/* Hide mobile toggle on desktop */
+.nav-toggle-input,
+.menu-toggle {
+  display: none;
+}
+
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1rem; /* Tightened from 1.5rem so all 5 links fit on one clean line */
+  gap: 1rem;
   align-items: center;
 }
 
@@ -101,8 +102,8 @@ nav a {
   text-decoration: none;
   color: var(--slate-light);
   font-weight: 500;
-  font-size: 0.88rem; /* Scaled cleanly so multi-word links don't wrap */
-  white-space: nowrap; /* Forces "Provision & Pathways" etc. onto single lines */
+  font-size: 0.88rem;
+  white-space: nowrap;
   transition: color 0.2s;
 }
 
@@ -119,7 +120,7 @@ nav a.active {
   border-radius: 6px;
   font-weight: 600 !important;
   font-size: 0.88rem;
-  white-space: nowrap; /* Keeps "Admissions & Contact" on one single line */
+  white-space: nowrap;
   display: inline-block;
 }
 
@@ -313,7 +314,7 @@ nav a.active {
   margin-bottom: 0;
 }
 
-/* --- PATHWAYS & TIMETABLE (PATHWAYS.HTML) --- */
+/* --- PATHWAYS & TIMETABLE --- */
 .pathways-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -427,7 +428,7 @@ tr:last-child td {
   color: var(--slate);
 }
 
-/* --- SAFEGUARDING (SAFEGUARDING.HTML) --- */
+/* --- SAFEGUARDING --- */
 .dsl-card {
   background: #FFFFFF;
   border: 1px solid var(--border);
@@ -513,7 +514,7 @@ tr:last-child td {
   color: #6B7280;
 }
 
-/* --- CONTACT & ONBOARDING (CONTACT.HTML) --- */
+/* --- CONTACT & ONBOARDING --- */
 .onboarding-steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -682,27 +683,36 @@ footer {
 @media (max-width: 820px) {
   .nav-container {
     position: relative;
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1rem;
   }
 
-  /* Hamburger Icon (Three Lines) */
+  /* Force Hamburger Button to be Visible */
   .menu-toggle {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: space-between;
-    width: 26px;
-    height: 19px;
+    width: 28px;
+    height: 20px;
     cursor: pointer;
     z-index: 120;
+    flex-shrink: 0;
   }
 
+  /* High contrast lines for the hamburger icon */
   .menu-toggle span {
     display: block;
     height: 3px;
     width: 100%;
-    background-color: var(--slate);
+    background-color: #2B2D42 !important;
     border-radius: 2px;
     transition: all 0.3s ease;
+  }
+
+  /* Hide raw input completely offscreen */
+  .nav-toggle-input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
   }
 
   /* Mobile Dropdown Menu Container */
@@ -744,23 +754,23 @@ footer {
 
   /* When checkbox is checked: slide the menu open */
   .nav-toggle-input:checked ~ nav {
-    max-height: 400px;
+    max-height: 420px;
   }
 
   /* Transform Hamburger into an "X" when open */
   .nav-toggle-input:checked ~ .menu-toggle span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-    background-color: var(--terracotta);
+    transform: translateY(8.5px) rotate(45deg);
+    background-color: var(--terracotta) !important;
   }
   .nav-toggle-input:checked ~ .menu-toggle span:nth-child(2) {
     opacity: 0;
   }
   .nav-toggle-input:checked ~ .menu-toggle span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-    background-color: var(--terracotta);
+    transform: translateY(-8.5px) rotate(-45deg);
+    background-color: var(--terracotta) !important;
   }
 
-  /* Other mobile responsive adjustments */
+  /* Page Grid adjustments */
   .hero {
     grid-template-columns: 1fr;
   }
@@ -773,41 +783,4 @@ footer {
   .footer-grid {
     grid-template-columns: 1fr;
   }
-}
-/* --- BRAND HEADER LOCKUP --- */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  text-decoration: none;
-}
-
-.brand-icon-img {
-  height: 52px;
-  width: auto;
-  display: block;
-  flex-shrink: 0;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand-text h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  line-height: 1.1;
-  color: var(--slate);
-}
-
-.brand-text span {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 0.72rem;
-  color: var(--terracotta);
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
 }
