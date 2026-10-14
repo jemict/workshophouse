@@ -673,8 +673,42 @@ footer {
   gap: 1rem;
 }
 
-/* --- RESPONSIVE MOBILE TWEAKS --- */
 @media (max-width: 820px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .brand {
+    justify-content: center;
+  }
+
+  nav {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+  }
+
+  nav ul {
+    display: flex; /* Restores the menu on mobile */
+    justify-content: flex-start;
+    gap: 0.75rem;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+  }
+
+  nav a {
+    font-size: 0.82rem;
+  }
+
+  .btn-nav {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
   .hero {
     grid-template-columns: 1fr;
   }
@@ -684,12 +718,10 @@ footer {
   .contact-grid {
     grid-template-columns: 1fr;
   }
-  nav ul {
-    display: none;
-  }
   .footer-grid {
     grid-template-columns: 1fr;
   }
+}
 }
 /* --- BRAND HEADER LOCKUP --- */
 .brand {
