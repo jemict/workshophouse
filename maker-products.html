@@ -101,34 +101,11 @@
     </div>
   </main>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h5>Workshop House</h5>
-        <p style="color:var(--slate-light); font-size:0.9rem; margin-bottom:1rem;">Specialist non-school creative enterprise and vocational learning in Redditch, Worcestershire. Supporting learners aged 9 to 16 with EOTAS and EHE pathways.</p>
-        <p style="color:var(--slate-light); font-size:0.85rem;">Lead Educator: Over 25 years teaching and special needs experience.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Quick Links</h5>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="pathways.html">Learning Pathways &amp; UAS</a></li>
-          <li><a href="maker-products.html">Maker Products</a></li>
-          <li><a href="safeguarding.html">Safeguarding &amp; Policies</a></li>
-          <li><a href="contact.html">Referrals &amp; Admissions</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5>Studio Base</h5>
-        <p style="color:var(--slate-light); font-size:0.9rem;">Redditch, Worcestershire</p>
-        <p style="color:var(--slate-light); font-size:0.9rem; margin-top:0.4rem;">Tues to Thurs: 09:30 to 15:30</p>
-        <p style="color:var(--slate-light); font-size:0.9rem; margin-top:0.4rem;">hello@workshophouse.org.uk</p>
-      </div>
-    </div>
-    <div class="legal-bar">
-      <span>Workshop House is an asset-locked Community Interest Company in formation. Registered in England &amp; Wales.</span>
-    </div>
-  </footer>
-
+ <footer id="site-footer"></footer>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('site-footer').innerHTML = data);
+  </script>
 </body>
 </html>
