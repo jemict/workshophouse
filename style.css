@@ -38,35 +38,57 @@ header {
 .nav-container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0.75rem 1.5rem;
+  padding: 0.65rem 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1rem;
 }
 
 .brand {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
   text-decoration: none;
+  flex-shrink: 0; /* Prevents the logo/brand from getting squeezed */
 }
 
-.brand-logo-img {
-  height: 72px;
+.brand-icon-img {
+  height: 48px; /* Slightly refined to give links more room */
   width: auto;
-  max-width: 220px;
+  max-width: 180px;
   object-fit: contain;
   display: block;
-  transition: transform 0.2s ease;
+  flex-shrink: 0;
 }
 
-.brand-logo-img:hover {
-  transform: scale(1.02);
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  line-height: 1.1;
+  color: var(--slate);
+}
+
+.brand-text span {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 0.68rem;
+  color: var(--terracotta);
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 1rem; /* Tightened from 1.5rem so all 5 links fit on one clean line */
   align-items: center;
 }
 
@@ -74,7 +96,8 @@ nav a {
   text-decoration: none;
   color: var(--slate-light);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.88rem; /* Scaled cleanly so multi-word links don't wrap */
+  white-space: nowrap; /* Forces "Provision & Pathways" etc. onto single lines */
   transition: color 0.2s;
 }
 
@@ -87,9 +110,12 @@ nav a.active {
 .btn-nav {
   background-color: var(--terracotta);
   color: #FFFFFF !important;
-  padding: 0.45rem 1rem;
+  padding: 0.45rem 0.9rem;
   border-radius: 6px;
   font-weight: 600 !important;
+  font-size: 0.88rem;
+  white-space: nowrap; /* Keeps "Admissions & Contact" on one single line */
+  display: inline-block;
 }
 
 .btn-nav:hover {
