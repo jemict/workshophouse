@@ -221,11 +221,12 @@
     </div>
   </main>
 
-  <footer>
-    <div class="legal-bar">
-      <span>Workshop House CIC • 71-75 Shelton Street, Covent Garden, London, WC2H 9JQ</span>
-    </div>
-  </footer>
+ <footer id="site-footer"></footer>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('site-footer').innerHTML = data);
+  </script>
 
 </body>
 </html>
