@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Us | Workshop House CIC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    :root {
+      --bg-cream: #F7F5F0;
+      --card-bg: #FFFFFF;
+      --slate: #2B2D42;
+      --slate-light: #5C5E70;
+      --terracotta: #C86D51;
+      --sage: #8A9A86;
+      --border-subtle: #E2DED6;
+    }
+    body {
+      background-color: var(--bg-cream);
+      color: var(--slate);
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+    .badge {
+      display: inline-block;
+      background-color: #E6EBE4;
+      color: var(--sage);
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--slate);
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+    .lead-text {
+      font-size: 1.15rem;
+      color: var(--slate-light);
+      max-width: 780px;
+      margin-bottom: 2.5rem;
+    }
+    .split-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+      align-items: start;
+      margin-bottom: 3.5rem;
+    }
+    .content-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+    .tier-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    .tier-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+    .tier-list li:last-child {
+      border-bottom: none;
+    }
+    .tier-price {
+      font-weight: 700;
+      color: var(--terracotta);
+      min-width: 55px;
+    }
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+      margin: 2rem 0;
+    }
+    .material-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 1.25rem;
+    }
+    .material-card h4 {
+      margin: 0 0 0.5rem 0;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--slate);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .material-card p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: var(--slate-light);
+    }
+    .btn-crowdfund {
+      display: inline-block;
+      background-color: var(--terracotta);
+      color: #FFFFFF !important;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      transition: opacity 0.2s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .btn-crowdfund:hover {
+      opacity: 0.92;
+    }
+    .donation-callout {
+      background-color: #F3F1EC;
+      border-left: 4px solid var(--terracotta);
+      padding: 1rem 1.25rem;
+      border-radius: 0 8px 8px 0;
+      margin-top: 1.5rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Banner -->
+  <div style="background-color: #EFECE6; color: #2B2D42; text-align: center; padding: 10px 16px; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid #E2DED6;">
+    🌱 <strong>Studio in development:</strong> We are actively securing our Redditch premises and grant funding! 
+    Help co-design our maker space by <a href="https://forms.cloud.microsoft/r/ekdyvqJRi8" target="_blank" style="color: #C86D51; text-decoration: underline; font-weight: 600;">taking our 3-minute community survey</a>.
+  </div>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand" title="Workshop House Home">
+        <img src="logo.jpg" alt="Workshop House Logo" class="brand-icon-img">
+        <div class="brand-text">
+          <h1>WORKSHOP HOUSE CIC</h1>
+          <span>CREATIVE ENTERPRISE &amp; MAKER STUDIO</span>
+        </div>
+      </a>
+
+      <!-- Pure CSS Hamburger Toggle -->
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input">
+      <label for="nav-toggle" class="menu-toggle" aria-label="Open Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pathways.html">Provision &amp; Pathways</a></li>
+          <li><a href="maker-products.html">Maker Products</a></li>
+          <li><a href="safeguarding.html">Safeguarding &amp; Policies</a></li>
+          <li><a href="support-us.html" class="active">Support Us</a></li>
+          <li><a href="contact.html" class="btn-nav">Admissions &amp; Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <span class="badge">Community Crowdfund</span>
+    <h1>Equip Our Gentle Maker Station</h1>
+    <p class="lead-text">
+      Help us stock our sensory-friendly craft station with traditional arts, clay, and cold edible craft supplies so young people outside mainstream education can create without pressure.
+    </p>
+
+    <div class="split-grid">
+      <!-- Left Column: Story -->
+      <div>
+        <h3>Why Tactile Crafts Matter</h3>
+        <p>
+          For a young person experiencing nervous system burnout or school-related anxiety, high-demand classroom tasks can feel completely overwhelming. 
+        </p>
+        <p>
+          At Workshop House CIC, our <strong>Gentle Maker Station</strong> offers an immediate, soothing alternative: self-paced, tactile, and sensory-friendly making where there are no strict right-or-wrong answers and zero production targets.
+        </p>
+        <p>
+          Learners pick an activity card from our binder, grab the matching storage box, and settle into their own rhythm—whether that is rolling air-dry clay, winding yarn pom-poms, designing with cake decorating tools, or creating pipe cleaner botanical sculptures.
+        </p>
+
+        <div class="donation-callout">
+          <strong>Physical Donations Welcome:</strong> Have unopened craft supplies, wool skeins, clay tools, or storage tubs looking for a good home? <a href="contact.html" style="color: var(--terracotta); text-decoration: underline;">Get in touch</a> to arrange a donation drop-off.
+        </div>
+      </div>
+
+      <!-- Right Column: GoFundMe Action Box -->
+      <div class="content-box">
+        <h3>Support via GoFundMe</h3>
+        <p style="color: var(--slate-light); font-size: 0.95rem;">
+          Your financial support directly purchases tactile consumables, safety craft tools, and modular storage units for our Redditch studio floor.
+        </p>
+
+        <ul class="tier-list">
+          <li>
+            <span class="tier-price">£10</span>
+            <span>Pipe cleaners, papercraft straws, cardstock &amp; wooden pegs</span>
+          </li>
+          <li>
+            <span class="tier-price">£25</span>
+            <span>Air-dry clay blocks, rolling pins &amp; texture impression tools</span>
+          </li>
+          <li>
+            <span class="tier-price">£50</span>
+            <span>Yarn, loom bands, junior sewing kits &amp; safety scissors</span>
+          </li>
+          <li>
+            <span class="tier-price">£100</span>
+            <span>Sugar modelling kits, fondant icing, cutters &amp; silicone mats</span>
+          </li>
+          <li>
+            <span class="tier-price">£250</span>
+            <span>A fully organised transparent storage bay &amp; visual recipe binder</span>
+          </li>
+        </ul>
+
+        <!-- Replace '#' with your live GoFundMe campaign link -->
+        <a href="#" target="_blank" rel="noopener" class="btn-crowdfund">
+          Back Our Station on GoFundMe ↗
+        </a>
+      </div>
+    </div>
+
+    <!-- What We Are Stocking Section -->
+    <h2>What We Are Sourcing</h2>
+    <p style="color: var(--slate-light); margin-bottom: 1.5rem;">
+      Every item is selected specifically for low-stakes, sensory-grounded creative exploration:
+    </p>
+
+    <div class="materials-grid">
+      <div class="material-card">
+        <h4>🏺 Clay &amp; Modelling</h4>
+        <p>Air-dry clay, terracotta, rolling pins, pottery sponge blocks, and wooden stylus tools.</p>
+      </div>
+      <div class="material-card">
+        <h4>🧵 Textiles &amp; Fibers</h4>
+        <p>Soft yarn skeins, loom bands, wooden peg dolls, safety sewing kits, and embroidery threads.</p>
+      </div>
+      <div class="material-card">
+        <h4>✂️ Paper &amp; Construction</h4>
+        <p>Heavyweight paper, origami sheets, safety contour scissors, glue sticks, pipe cleaners, and paper straws.</p>
+      </div>
+      <div class="material-card">
+        <h4>🎂 Cold Edible Crafts</h4>
+        <p>Ready-to-roll modelling fondant, biscuit blanks, plunger cutters, edible ink markers, and texture mats.</p>
+      </div>
+      <div class="material-card">
+        <h4>🎨 Paints &amp; Mark Making</h4>
+        <p>Watercolour discs, soft-grip brushes, wax resist pastels, and washable clean-up supplies.</p>
+      </div>
+      <div class="material-card">
+        <h4>🗄️ Accessible Storage</h4>
+        <p>Clear labelled storage bins, drawer carts, and heavy-duty binders with laminated visual guides.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Legal CIC Footer -->
+  <footer style="background-color: #FFFFFF; border-top: 1px solid var(--border-subtle); padding: 2rem 1.5rem; text-align: center; font-size: 0.85rem; color: var(--slate-light); margin-top: 4rem;">
+    <p style="margin: 0 0 0.5rem 0;">
+      <strong>Workshop House CIC</strong> is a Community Interest Company registered in England and Wales (Company No. 16877316).
+    </p>
+    <p style="margin: 0;">
+      Operating with an approved statutory asset lock for community benefit. Dedicated to neurodivergent and out-of-school young people.
+    </p>
+  </footer>
+
+</body>
+</html>
