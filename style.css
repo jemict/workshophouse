@@ -918,3 +918,12 @@ footer {
   margin-top: 1.5rem;
   font-size: 0.95rem;
 }
+
+.split-grid p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.split-grid p:last-of-type {
+  margin-bottom: 0;
+}
