@@ -784,3 +784,137 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+/* =================================================================ators
+   SUPPORT US PAGE STYLING (GoFundMe & Tactile Maker Station)
+   ================================================================= */
+
+/* Container and Layout */
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+/* Page Specific Badge */
+.badge {
+  display: inline-block;
+  background-color: #E6EBE4;
+  color: var(--sage, #8A9A86);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Lead Intro Text */
+.lead-text {
+  font-size: 1.15rem;
+  color: var(--slate-light, #5C5E70);
+  max-width: 780px;
+  margin-bottom: 2.5rem;
+}
+
+/* Split Grid for Story & Action Card */
+.split-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 3.5rem;
+}
+
+/* Content Card Box */
+.content-box {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle, #E2DED6);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* Tiered Donation List */
+.tier-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.tier-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-subtle, #E2DED6);
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+
+.tier-list li:last-child {
+  border-bottom: none;
+}
+
+.tier-price {
+  font-weight: 700;
+  color: var(--terracotta, #C86D51);
+  min-width: 55px;
+}
+
+/* Materials / Equipment Grid */
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.material-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-subtle, #E2DED6);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.material-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--slate, #2B2D42);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.material-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--slate-light, #5C5E70);
+}
+
+/* Crowdfund Action Button */
+.btn-crowdfund {
+  display: inline-block;
+  background-color: var(--terracotta, #C86D51);
+  color: #FFFFFF !important;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  transition: opacity 0.2s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn-crowdfund:hover {
+  opacity: 0.92;
+}
+
+/* Physical Drop-Off Callout */
+.donation-callout {
+  background-color: #F3F1EC;
+  border-left: 4px solid var(--terracotta, #C86D51);
+  padding: 1rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
