@@ -280,15 +280,12 @@
     </div>
   </main>
 
-  <!-- Legal CIC Footer -->
-  <footer style="background-color: #FFFFFF; border-top: 1px solid var(--border-subtle); padding: 2rem 1.5rem; text-align: center; font-size: 0.85rem; color: var(--slate-light); margin-top: 4rem;">
-    <p style="margin: 0 0 0.5rem 0;">
-      <strong>Workshop House CIC</strong> is a Community Interest Company registered in England and Wales (Company No. 16877316).
-    </p>
-    <p style="margin: 0;">
-      Operating with an approved statutory asset lock for community benefit. Dedicated to neurodivergent and out-of-school young people.
-    </p>
-  </footer>
+<footer id="site-footer"></footer>
+  <script>
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('site-footer').innerHTML = data);
+  </script>
 
 </body>
 </html>
